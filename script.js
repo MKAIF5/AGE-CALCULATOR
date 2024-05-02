@@ -6,7 +6,6 @@ tDate.innerHTML = new Date().toDateString();
 
 function ageCheck() {
   let ageDate = new Date(user.value);
-
   let date1 = ageDate.getDate();
   let month1 = ageDate.getMonth() + 1;
   let year1 = ageDate.getFullYear();
@@ -20,6 +19,9 @@ function ageCheck() {
   let date3, month3, year3;
 
   year3 = year2 - year1;
+  if (ageDate > today) {
+    alert("invalid Date")
+  }
   if (month2 >= month1) {
     month3 = month2 - month1;
   } else {
